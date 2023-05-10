@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { store } from './app/store';
+import { ConfigProvider, theme } from "antd";
 import reportWebVitals from './reportWebVitals';
 import { Paths } from './paths'
 import './index.css';
@@ -30,7 +31,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <ConfigProvider theme={{
+        algorithm: theme.darkAlgorithm,
+      }}>
+        <RouterProvider router={router} />
+      </ConfigProvider>
     </Provider>
   </React.StrictMode>
 );
