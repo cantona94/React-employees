@@ -7,14 +7,14 @@ import { ConfigProvider, theme } from "antd";
 import reportWebVitals from './reportWebVitals';
 import { Paths } from './paths'
 import './index.css';
-import { Register, Login } from './pages'
+import { Register, Login, Employees } from './pages'
 import { Auth } from './features/auth/auth';
 
 
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>home</h1>,
+    element: <Employees />,
   },
   {
     path: Paths.login,
