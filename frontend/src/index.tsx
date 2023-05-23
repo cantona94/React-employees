@@ -7,7 +7,7 @@ import { ConfigProvider, theme } from "antd";
 import reportWebVitals from './reportWebVitals';
 import { Paths } from './paths'
 import './index.css';
-import { Register, Login, Employees, AddEmployee, Status } from './pages'
+import { Register, Login, Employees, AddEmployee, Status, Employee } from './pages'
 import { Auth } from './features/auth/auth';
 
 
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: Paths.employeeAdd,
     element: <AddEmployee />,
+  },
+  {
+    path: `${Paths.employee}/:id`,
+    element: <Employee />,
   },
   {
     path: `${Paths.status}/:status`,
