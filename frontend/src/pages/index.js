@@ -4,3 +4,4 @@ export { Employees } from './Employees';
 export { AddEmployee } from './AddEmployee';
 export { Status } from './Status';
 export { Employee } from './Employee';
+export { EditEmployee } from './EditEmployee';
